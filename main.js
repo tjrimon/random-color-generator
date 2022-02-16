@@ -1,3 +1,7 @@
+//Random Color Generation Js File
+// Author Name: TJ Rimon
+// Version : 1.00
+// Release Date: 16 feb 2022
 document.getElementById('copy-btn').addEventListener('click', function () {
     const inputValue = document.getElementById('input')
     inputValue.select()
