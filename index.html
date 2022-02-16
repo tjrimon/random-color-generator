@@ -6,53 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Color Code Generator</title>
-    <style>
-        body {
-            background-color: #000;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 95vh;
-            text-align: center;
-        }
-
-        .generate-color {
-            background-color: white;
-            color: #000;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 10px;
-            font-size: 20px;
-            font-weight: 500;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .input {
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-
-        .copy-btn {
-            padding: 8px 10px;
-            margin-left: 5px;
-            cursor: pointer;
-            border: none;
-            background: rgb(255, 255, 255);
-            color: rgb(0, 0, 0);
-            border-radius: 5px;
-        }
-
-        h1 {
-            font-size: 40px;
-            color: #fff;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -63,24 +17,7 @@
             <button class="generate-color" id="generate-color">Generate Color</button>
         </div>
     </section>
-    <script>
-        document.getElementById('copy-btn').addEventListener('click', function () {
-            const inputValue = document.getElementById('input')
-            inputValue.select()
-            navigator.clipboard.writeText(inputValue.value)
-            document.getElementById('copy-btn').innerText = 'Copied'
-        })
-        document.getElementById('generate-color').addEventListener('click', function () {
-            let red = Math.round(Math.random() * 255)
-            let green = Math.round(Math.random() * 255)
-            let blue = Math.round(Math.random() * 255)
-            let hexaDesimalColor = ('#' + red.toString(16) + green.toString(16) + blue.toString(16))
-            document.body.style.backgroundColor = hexaDesimalColor
-            document.getElementById('input').value = hexaDesimalColor
-            document.getElementById('copy-btn').innerText = 'Copy'
-        })
-
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
